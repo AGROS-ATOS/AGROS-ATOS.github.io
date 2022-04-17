@@ -27,6 +27,9 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .date-container {
@@ -38,7 +41,7 @@ body {
 }
 
 .date-container #am-pm {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .date-container .date {
@@ -50,7 +53,7 @@ body {
 }
 
 .place-container .time-zone {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 200;
 }
 
@@ -60,6 +63,7 @@ body {
 }
 
 .current-info .others {
+  width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +121,7 @@ body {
   padding: 15px;
   padding-right: 40px;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .future-forecast .today .day {
@@ -156,7 +160,7 @@ body {
   border: 1px solid #eee;
   padding: 15px;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .weather-forecast .weather-forecast-item .day {
@@ -171,9 +175,15 @@ body {
   font-size: 12px;
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 1000px) {
   .container {
     padding: 20px;
+  }
+  .current-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .future-forecast {
     -webkit-box-pack: start;
@@ -182,13 +192,13 @@ body {
     -webkit-box-align: none;
         -ms-flex-align: none;
             align-items: none;
-    overflow-y: scroll;
+    overflow-x: scroll;
   }
   .future-forecast .today .temp {
     font-size: 16px;
   }
   .date-container .time {
-    font-size: 50px;
+    font-size: 40px;
   }
   .date-container #am-pm {
     font-size: 20px;
@@ -197,14 +207,14 @@ body {
     font-size: 20px;
   }
   .place-container {
-    text-align: end;
-    margin-top: 15px;
+    margin-top: 5px;
   }
   .place-container .time-zone {
     font-size: 20px;
   }
   .current-info .others {
     padding: 12px;
+    width: 300px;
   }
   .current-info .others .weather-item {
     font-size: 14px;
@@ -220,6 +230,115 @@ body {
         -ms-flex-align: none;
             align-items: none;
     overflow-x: scroll;
+  }
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li {
+  list-style: none;
+}
+
+.navbar-links ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar-links ul li a:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 786px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: .5rem 1rem;
+  }
+  .navbar-links.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=weather.css.map */

@@ -44,7 +44,7 @@ function getWeatherData () {
 }
 
 function showWeatherData (data){
-    let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
+    let {humidity, pressure, sunrise, sunset, wind_speed,clouds} = data.current;
 
     timezone.innerHTML = data.timezone;
     countryEl.innerHTML = data.lat + 'N ' + data.lon+'E'
@@ -70,6 +70,7 @@ function showWeatherData (data){
         <div>Sunset</div>
         <div>${window.moment(sunset*1000).format('HH:mm a')}</div>
     </div>
+    
     
     
     `;
@@ -102,3 +103,11 @@ function showWeatherData (data){
 
     weatherForecastEl.innerHTML = otherDayForcast;
 }
+
+const toggleButton = document.getElementById('togglebtn')
+const navbarLinks = document.getElementById('nlink')
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+  console.log('toggle')
+})

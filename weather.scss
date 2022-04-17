@@ -23,6 +23,8 @@ body{
 .current-info{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    
     
 }
 .date-container{
@@ -33,7 +35,7 @@ body{
 }
 
 .date-container #am-pm{
-    font-size: 30px;    
+    font-size: 20px;    
 }
 
 .date-container .date{
@@ -45,7 +47,7 @@ body{
 }
 
 .place-container .time-zone{
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 200;
 }
 
@@ -55,7 +57,8 @@ body{
 }
 
 .current-info .others{
-     
+
+    width:400px ;
     display: flex;
     flex-direction: column;
     background: rgba(24,24,27, 0.6);
@@ -94,7 +97,7 @@ body{
     padding:15px;
     padding-right: 40px;
     border-radius: 10px;
-    background: rgba(0,0,0,0.2)
+    background: rgba(0,0,0,0.5)
 }
 
 .future-forecast .today .day{
@@ -122,7 +125,7 @@ body{
     border: 1px solid #eee;
     padding: 15px;
     border-radius: 10px;
-    background: rgba(0,0,0,0.2)
+    background: rgba(0,0,0,0.5)
 }
 
 .weather-forecast .weather-forecast-item .day{
@@ -138,16 +141,20 @@ body{
 }
 
 
-@media only screen and  (max-width:730px){
+@media only screen and  (max-width:1000px){
     
     .container{
         padding: 20px;
+    }
+
+    .current-info{
+        flex-direction: column;
     }
     
     .future-forecast{
         justify-content: start;
         align-items: none;
-        overflow-y: scroll;
+        overflow-x: scroll;
     }
 
     .future-forecast .today .temp{
@@ -155,7 +162,7 @@ body{
     }
 
     .date-container .time{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .date-container #am-pm{
@@ -167,8 +174,8 @@ body{
     }
 
     .place-container{
-        text-align: end;
-        margin-top: 15px;
+        
+        margin-top: 5px;
     }
 
     .place-container .time-zone{
@@ -177,6 +184,8 @@ body{
 
     .current-info .others{
         padding: 12px;
+        width:300px;
+        
     }
 
     .current-info .others .weather-item{
@@ -192,3 +201,87 @@ body{
         overflow-x: scroll;
     }
 }
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    .logo {
+      font-size: 1.5rem;
+      margin: .5rem;
+    }
+  }
+  
+  
+  
+  .navbar-links {
+    height: 100%;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+          display: block;
+          text-decoration: none;
+          color: white;
+          padding: 1rem;
+          &:hover{
+            background-color: #555;
+          }
+        }
+      }
+    }
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 786px)
+  { 
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .toggle-button {
+      display: flex; 
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+      ul {
+        width: 100%;
+        flex-direction: column;
+        li {
+          text-align: center;
+          a {
+            padding: .5rem 1rem;
+          }
+        }
+      }
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  }
