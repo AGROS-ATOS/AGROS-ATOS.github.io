@@ -1,0 +1,19 @@
+$bgcolor : rgb(20, 78, 5) ;
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+body {
+    margin: 0;
+    background-color: $bgcolor;   
+    font-size: 220%;
+  }
+
+
+ 
+

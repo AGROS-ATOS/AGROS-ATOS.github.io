@@ -1,0 +1,24 @@
+body {
+  /* background-image: linear-gradient(rgb(18, 53, 4) 0%,rgb(0, 0, 0) 25%,rgb(0, 0, 0) 75%, rgb(18, 53, 4) 100%); */
+  background-image: radial-gradient(black 40%, #123504 100%);
+}
+
+.image {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+img {
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+}
+/*# sourceMappingURL=intro.css.map */
