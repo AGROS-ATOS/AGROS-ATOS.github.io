@@ -19,6 +19,7 @@ function clearInputError(inputElement) {
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
+    
 
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
         e.preventDefault();
@@ -32,12 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add("form--hidden");
     });
 
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();  
-        window.open(weather.html);
+  
+    
+
+
+     loginForm.addEventListener("submit", e => {
+        e.preventDefault();      
+        const username=document.getElementById("user").value;
+        const password=document.getElementById("pass").value;    
         
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
-    });
+        if((username === 'AGROS') && (password === '2248')){
+            window.open('weather.html','_self');
+        }
+        else{
+            setFormMessage(loginForm, "error", "Invalid username/password combination");
+        }         
+        
+    }); 
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
@@ -53,3 +65,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
