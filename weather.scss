@@ -3,16 +3,32 @@
 *{
     box-sizing: border-box;
     margin:0;
-    padding:0;
+    padding:0;    
+    scrollbar-color: rgba(0, 0, 0, 0.8) rgba(63, 62, 62, 0.2);
 }
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(63, 62, 62, 0.2)
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.8)
+    
+    
+  }
 
 body{
     background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(./bg.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    overflow:hidden;
+    overflow: hidden;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .container{
@@ -76,7 +92,7 @@ body{
 
 
 .future-forecast{
-    background: rgba(24,24,27,0.7);
+    background: rgba(24,24,27,0.5);
     padding: 25px;
     position: fixed;
     bottom: 0;
@@ -85,7 +101,7 @@ body{
     width: 100%;
     align-items: center;
     justify-content: center;
-    overflow-y: hidden;
+    overflow-y: hidden;    
 }
 
 .future-forecast .today{
@@ -95,9 +111,16 @@ body{
     border: 1px solid #eee;
     border-radius: 10px;
     padding:15px;
+    margin:0 10px;
     padding-right: 40px;
     border-radius: 10px;
-    background: rgba(0,0,0,0.5)
+    background: rgba(0,0,0,0.5);
+}
+
+.future-forecast .today:hover{
+    background-color: rgba(0,0,0,0.7);
+    transform: scale(1.08);
+    transition: 1s;
 }
 
 .future-forecast .today .day{
@@ -128,6 +151,12 @@ body{
     background: rgba(0,0,0,0.5)
 }
 
+.weather-forecast .weather-forecast-item:hover{
+    background-color: rgba(0,0,0,0.7);
+    transform: scale(1.15);
+    transition: 1s;
+}
+
 .weather-forecast .weather-forecast-item .day{
     padding: 5px 15px;
     background: #3C3C44;
@@ -136,7 +165,8 @@ body{
 }
 
 .weather-forecast .weather-forecast-item .temp{
-    font-weight: 100;
+    
+    font-weight: 300;
     font-size: 12px;
 }
 
@@ -155,6 +185,7 @@ body{
         justify-content: start;
         align-items: none;
         overflow-x: scroll;
+        position: relative;
     }
 
     .future-forecast .today .temp{
@@ -202,16 +233,25 @@ body{
     }
 }
 
+p{
+    text-align: center;
+    font-size: 20px;
+}
+
 .navbar {
     display: flex;
     position: relative;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #333;
     color: white;
     .logo {
-      font-size: 1.5rem;
-      margin: .5rem;
+      font-size: 2rem;
+      margin: .25rem;
+      a{
+        text-decoration: none;
+        color: white;
+      }
     }
   }
   

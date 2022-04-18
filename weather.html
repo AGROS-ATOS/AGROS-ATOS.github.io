@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./weather.css">
-    <title>Weather App</title>
+    <!-- <link rel="stylesheet" href="./nav.css"> -->
+    <title>AGROS</title>
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">AGROS</div>
+        <div class="logo"><a href="./weather.html">AGROS</a></div>
           <a href="#" class="toggle-button" id="togglebtn">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -19,14 +20,13 @@
           <div class="navbar-links" id="nlink">
             <ul>        
               <li><a href="#">PROFILE</a></li>
-              <li><a href="#">MY FARMS</a></li>              
+              <li><a href="./farms.html">MY FARMS</a></li>              
             </ul>
         </div>
     </nav>
     
     <div class="container">
         <div class="current-info">
-
             <div class="date-container">
                 <div class="time" id="time">
                     12:30 <span id="am-pm">PM</span>
@@ -37,6 +37,7 @@
             </div>
 
             <div class="others" id="current-weather-items">
+                <p>CURRENT WEATHER<br></p>
                 <div class="weather-item">
                     <div>Humidity</div>
                     <div>48%</div>
