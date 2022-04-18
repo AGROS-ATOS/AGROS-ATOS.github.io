@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const password=document.getElementById("pass").value;    
         
         if((username === 'AGROS') && (password === '2248')){
-            window.open('weather.html','_self');
+            window.open('./weather.html','_self');
         }
         else{
             setFormMessage(loginForm, "error", "Invalid username/password combination");
