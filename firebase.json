@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "agros-atos.github.io",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
