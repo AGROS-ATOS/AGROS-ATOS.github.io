@@ -1,0 +1,27 @@
+[debug] [2022-04-20T14:43:22.942Z] ----------------------------------------------------------------------
+[debug] [2022-04-20T14:43:22.946Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-04-20T14:43:22.947Z] CLI Version:   10.7.0
+[debug] [2022-04-20T14:43:22.947Z] Platform:      win32
+[debug] [2022-04-20T14:43:22.948Z] Node Version:  v16.14.2
+[debug] [2022-04-20T14:43:22.950Z] Time:          Wed Apr 20 2022 18:43:22 GMT+0400 (Gulf Standard Time)
+[debug] [2022-04-20T14:43:22.950Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-20T14:43:22.969Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-20T14:43:22.970Z] > authorizing via signed-in user (agros.atos4@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Hp\Desktop\AGROS-ATOS.github.io
+
+[debug] [2022-04-20T15:51:46.918Z] Error: kill ENOSYS
+    at process.kill (node:internal/process/per_thread:220:13)
+    at process.listener (C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:95:15)
+    at process.emit (node:events:526:28)
+[error] 
+[error] Error: An unexpected error has occurred.

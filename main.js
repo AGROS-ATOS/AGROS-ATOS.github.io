@@ -11,6 +11,7 @@ const firebaseConfig = {
   storageBucket: "agros-2ad4a.appspot.com",
   messagingSenderId: "642301956260",
   appId: "1:642301956260:web:4ffce60e97ddee934a1631"
+  
 };
 
 const app = initializeApp(firebaseConfig);
