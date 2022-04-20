@@ -1,27 +1,31 @@
-[debug] [2022-04-20T14:43:22.942Z] ----------------------------------------------------------------------
-[debug] [2022-04-20T14:43:22.946Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2022-04-20T14:43:22.947Z] CLI Version:   10.7.0
-[debug] [2022-04-20T14:43:22.947Z] Platform:      win32
-[debug] [2022-04-20T14:43:22.948Z] Node Version:  v16.14.2
-[debug] [2022-04-20T14:43:22.950Z] Time:          Wed Apr 20 2022 18:43:22 GMT+0400 (Gulf Standard Time)
-[debug] [2022-04-20T14:43:22.950Z] ----------------------------------------------------------------------
+[debug] [2022-04-20T16:40:15.932Z] ----------------------------------------------------------------------
+[debug] [2022-04-20T16:40:15.937Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-04-20T16:40:15.938Z] CLI Version:   10.7.0
+[debug] [2022-04-20T16:40:15.939Z] Platform:      win32
+[debug] [2022-04-20T16:40:15.939Z] Node Version:  v16.14.2
+[debug] [2022-04-20T16:40:15.941Z] Time:          Wed Apr 20 2022 20:40:15 GMT+0400 (Gulf Standard Time)
+[debug] [2022-04-20T16:40:15.941Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2022-04-20T14:43:22.969Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2022-04-20T14:43:22.970Z] > authorizing via signed-in user (agros.atos4@gmail.com)
+[debug] [2022-04-20T16:40:16.082Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-20T16:40:16.083Z] > authorizing via signed-in user (agros.atos4@gmail.com)
+[debug] [2022-04-20T16:40:16.083Z] [iam] checking project atos-agros for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-04-20T16:40:16.086Z] > refreshing access token with scopes: []
+[debug] [2022-04-20T16:40:16.088Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-04-20T16:40:16.604Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Wed, 20 Apr 2022 16:40:17 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-04-20T16:40:18.068Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/atos-agros:testIamPermissions [none]
+[debug] [2022-04-20T16:40:18.069Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atos-agros:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-04-20T16:40:19.584Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/atos-agros:testIamPermissions 200
+[debug] [2022-04-20T16:40:19.585Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atos-agros:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-04-20T16:40:19.590Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/atos-agros [none]
+[debug] [2022-04-20T16:40:20.080Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/atos-agros 200
+[debug] [2022-04-20T16:40:20.081Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/atos-agros {"projectId":"atos-agros","projectNumber":"483820044445","displayName":"AGROS-ATOS","name":"projects/atos-agros","resources":{"hostingSite":"atos-agros"},"state":"ACTIVE"}
 [info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  C:\Users\Hp\Desktop\AGROS-ATOS.github.io
-
-[debug] [2022-04-20T15:51:46.918Z] Error: kill ENOSYS
-    at process.kill (node:internal/process/per_thread:220:13)
-    at process.listener (C:\Users\Hp\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:95:15)
-    at process.emit (node:events:526:28)
+[info] === Deploying to 'atos-agros'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-04-20T16:40:20.098Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/atos-agros [none]
+[debug] [2022-04-20T16:40:20.591Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/atos-agros 200
+[debug] [2022-04-20T16:40:20.591Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/atos-agros {"projectId":"atos-agros","projectNumber":"483820044445","displayName":"AGROS-ATOS","name":"projects/atos-agros","resources":{"hostingSite":"atos-agros"},"state":"ACTIVE"}
 [error] 
-[error] Error: An unexpected error has occurred.
+[error] Error: Expected to be in a project directory, but none was found.

@@ -5,12 +5,19 @@ import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasej
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCL2pMAOVjFjTyyiC_jhxE1TVasYU8Vn_s",
+  /* apiKey: "AIzaSyCL2pMAOVjFjTyyiC_jhxE1TVasYU8Vn_s",
   authDomain: "agros-2ad4a.firebaseapp.com",
   projectId: "agros-2ad4a",
   storageBucket: "agros-2ad4a.appspot.com",
   messagingSenderId: "642301956260",
-  appId: "1:642301956260:web:4ffce60e97ddee934a1631"
+  appId: "1:642301956260:web:4ffce60e97ddee934a1631" */
+
+  apiKey: "AIzaSyCOv2HY1j-a5JoxHq0bBXX3kbY-v8W7XBU",
+  authDomain: "atos-agros.firebaseapp.com",
+  projectId: "atos-agros",
+  storageBucket: "atos-agros.appspot.com",
+  messagingSenderId: "483820044445",
+  appId: "1:483820044445:web:cc17bd7a62e4b195d9d474"
   
 };
 
