@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./farms.css">
     <!-- <link rel="stylesheet" href="./nav.css"> -->
     <title>AGROS</title>
 </head>
 <body>
+
     <nav class="navbar">
         <div class="logo"><a href="./weather.html">AGROS</a></div>
           <a href="#" class="toggle-button" id="togglebtn">
@@ -18,52 +20,44 @@
           </a>
           <div class="navbar-links" id="nlink">
             <ul>        
-              <li><a href="#">PROFILE</a></li>
-              <li><a href="./farms.html">MY FARMS</a></li>              
+              
+              <li><a href="./farms.html">MY FARMS</a></li>   
+              <li><a id="signout">SIGN OUT</a></li>           
             </ul>
         </div>
     </nav>
-
-
-    <h1>MY FARMS</h1>
-    <div class="container" class="hidden">
-        
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>  
-        <div class="section">
-          <div class="weather-item">
-            <div>COUNTRY</div>
-            <div>India</div>
-          </div>
-          <div class="weather-item">
-            <div>CITY</div>
-            <div>Mumbai</div>
-          </div>
-          <div class="weather-item">
-            <div>CROP TYPE</div>
-            <div>Wheat</div>
-          </div>
-          <div class="weather-item">
-            <div>AREA</div>
-            <div>1 aqre</div>
-          </div>
-          <div class="weather-item">
-            <div>BUDGET</div>
-            <div>500 USD</div>
-          </div>
-        </div> 
-        
-               
-    </div>
-    <div class="image"><a href="./createfarms.html"><img src="./plus.png"></a></div>
-
-    <!-- <script src="./weather.js"></script>   -->
-          
-
     
+    <h1>MY FARMS</h1>
+
+    <div class="future-forecast">
+        
+
+        <div class="weather-forecast" id="weather-forecast">        
+            
+            
+           
+            
+                       
+
+        </div>
+        <div class="weather-forecast" id="weather-forecast2">
+
+        </div>
+
+    </div>
+    <div class="section">
+      <input type="text" id="farm_input" class="farm-search" autofocus placeholder="ENTER FARM NAME">
+      <button class="continue" type="submit" id="btn"> >></button><br>
+      <button class="continue" type="submit" id="btn2">VIEW ALL FARMS</button>
+      <div class="image"><a href="./createfarms.html"><img src="./plus.png"><a href="./deletefarms.html"><img src="./minus.png"></a></div>
+
+    </div>
+    
+
+
+
+
+    <script src="farmdata.js" type="module"></script>
 </body>
 
 </html>

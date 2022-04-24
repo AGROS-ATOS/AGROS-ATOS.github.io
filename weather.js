@@ -3,14 +3,42 @@ const dateEl = document.getElementById('date');
 const currentWeatherItemsEl = document.getElementById('current-weather-items');
 const timezone = document.getElementById('time-zone');
 const countryEl = document.getElementById('country');
+//const locationEl = document.getElementById('location');
 const weatherForecastEl = document.getElementById('weather-forecast');
 const currentTempEl = document.getElementById('current-temp');
+
+const button = document.getElementById("btn");
+
+button.addEventListener("click",()=>{
+    const searchElement = document.getElementById("city_input").value;
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchElement}&limit=5&appid=22bfdce89a6b55d193e506d6827ae2c4`)
+    .then(response => response.json()).then(data =>   
+   show_data(data)
+   )
+})
+//let loc
+
+function show_data(data){
+    console.log(data)
+  
+   let lt=data[0].lat  
+   let ln=data[0].lon   
+   //loc=data[0].name;
+
+   fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lt}&lon=${ln}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
+
+        console.log(data)
+        showWeatherData(data);
+    })   
+
+}
 
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const API_KEY ='49cc8c821cd2aff9af04c9f98c36eb74';
+const API_KEY ='9f99fc729185f035ac6d2deda66bd983';
+
 
 setInterval(() => {
     const time = new Date();
@@ -33,7 +61,7 @@ function getWeatherData () {
     navigator.geolocation.getCurrentPosition((success) => {
         
         let {latitude, longitude } = success.coords;
-
+        
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(res => res.json()).then(data => {
 
         console.log(data)
@@ -47,6 +75,7 @@ function showWeatherData (data){
     let {humidity, pressure, sunrise, sunset, wind_speed,clouds} = data.current;
 
     timezone.innerHTML = data.timezone;
+    //locationEl.innerHTML= loc;
     countryEl.innerHTML = data.lat + 'N ' + data.lon+'E'
 
     currentWeatherItemsEl.innerHTML = 
@@ -79,7 +108,7 @@ function showWeatherData (data){
 
     let otherDayForcast = ''
     data.daily.forEach((day, idx) => {
-        if(idx == 0){
+        /* if(idx == 0){
             currentTempEl.innerHTML = `
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
@@ -89,17 +118,21 @@ function showWeatherData (data){
             </div>
             
             `
-        }else{
+        }else{ */
             otherDayForcast += `
             <div class="weather-forecast-item">
-                <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
-                <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+            <img src="https://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
+            
+            <div class="other">
+                <div class="day">${window.moment(day.dt*1000).format('dddd')}</div>
+                <div class="temp">${day.weather[0].description}</div>
                 <div class="temp">Night - ${day.temp.night}&#176;C</div>
                 <div class="temp">Day - ${day.temp.day}&#176;C</div>
             </div>
+            </div>
             
             `
-        }
+        //}
     })
 
 
@@ -113,3 +146,6 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
   console.log('toggle')
 })
+
+
+

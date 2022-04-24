@@ -1,5 +1,4 @@
 body {
-  max-height: 100vh;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,7 +30,8 @@ body {
 
 .container,
 .form__input,
-.form__button {
+.form__button,
+.select-style {
   font: 500 1rem 'Quicksand', sans-serif;
 }
 
@@ -180,4 +180,23 @@ body {
   border-color: #099a80;
   background: #ffffff;
 }
-/*# sourceMappingURL=styles.css.map */
+
+/* .select-style:after {
+    top: 50%;
+    left: 85%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+}
+.select-style select:focus {
+    outline: none;
+} */
+/*# sourceMappingURL=createfarms.css.map */

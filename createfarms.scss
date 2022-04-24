@@ -6,7 +6,7 @@ $color-success: hsl(116, 68%, 49%);
 $border-radius: 10px;
 
 body{
-  max-height: 100vh;
+  //max-height: 100vh;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -30,7 +30,8 @@ body{
 
 .container,
 .form__input,
-.form__button {
+.form__button,
+.select-style {
   font: 500 1rem 'Quicksand', sans-serif;
 }
 
@@ -146,7 +147,7 @@ body{
 
 .container img{
     width: 25%;
-    
+       
 }
 
 .select-style {
@@ -171,3 +172,22 @@ body{
     border-color: $color-primary;
     background: #ffffff;
 }
+
+/* .select-style:after {
+    top: 50%;
+    left: 85%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+}
+.select-style select:focus {
+    outline: none;
+} */

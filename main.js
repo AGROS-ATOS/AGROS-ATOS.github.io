@@ -1,8 +1,8 @@
 //const flag = 1;
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+import { getDatabase, get, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCOv2HY1j-a5JoxHq0bBXX3kbY-v8W7XBU",
@@ -37,6 +37,7 @@ function clearInputError(inputElement) {
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
+    const forgotpassForm = document.querySelector("#forgot_password");
     
 
     document.querySelector("#linkCreateAccount").addEventListener("click", e => {
@@ -50,6 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
         loginForm.classList.remove("form--hidden");
         createAccountForm.classList.add("form--hidden");
     });  
+
+    document.querySelector("#linkLogin2").addEventListener("click", e => {
+        e.preventDefault();
+        loginForm.classList.remove("form--hidden");
+        forgotpassForm.classList.add("form--hidden");        
+    });  
+
+    document.querySelector("#linkForgotPass").addEventListener("click", e => {
+        e.preventDefault();
+        loginForm.classList.add("form--hidden");
+        forgotpassForm.classList.remove("form--hidden");        
+    }); 
 
 
     loginForm.addEventListener("submit", e => {
@@ -108,6 +121,19 @@ document.addEventListener("DOMContentLoaded", () => {
           alert(errorMessage);        
         });            
     });
+
+    forgotpassForm.addEventListener("submit",e => {
+        e.preventDefault();        
+        const for_email=document.getElementById("register_email").value;
+        sendPasswordResetEmail(auth, for_email)
+        .then(() => {
+            alert("PASSWORD RESET EMAIL SENT SUCCESSFULLY!");
+        })
+        .catch(error => {
+            alert(error);
+        })
+
+    })
 
 
     document.querySelectorAll(".form__input").forEach(inputElement => {

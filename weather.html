@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="./weather.css">
     <!-- <link rel="stylesheet" href="./nav.css"> -->
     <title>AGROS</title>
@@ -19,8 +20,9 @@
           </a>
           <div class="navbar-links" id="nlink">
             <ul>        
-              <li><a href="#">PROFILE</a></li>
-              <li><a href="./farms.html">MY FARMS</a></li>              
+              
+              <li><a href="./farms.html">MY FARMS</a></li>  
+              <li><a id="signout">SIGN OUT</a></li>                      
             </ul>
         </div>
     </nav>
@@ -63,8 +65,11 @@
             </div>
 
             <div class="place-container">
-                <div class="time-zone" id="time-zone">Asia/Kolkata</div>
-                <div id="country" class="country">IN</div>
+                <div class="time-zone" id="time-zone">Asia/Dubai</div>
+                <!-- <div id="location" class="country">.</div> -->
+                <div id="country" class="country">25.0923N 55.3837E</div>
+                <input type="text" id="city_input" class="city-search" id="auto" autofocus placeholder="ENTER LOCATION">
+                <button class="continue" type="submit" id="btn">>></button>
             </div>
         </div>
 
@@ -72,76 +77,87 @@
     </div>
 
     <div class="future-forecast">
-        <div class="today" id="current-temp">
+        <!-- <div class="today" id="current-temp">
             <img src="http://openweathermap.org/img/wn//01d@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
                 <div class="day">Sunday</div>
                 <div class="temp">Night - 27.51°C</div>
                 <div class="temp">Day - 36.83°C</div>
             </div>
-        </div>
+        </div> -->
 
         <div class="weather-forecast" id="weather-forecast">
             <div class="weather-forecast-item">
-                <div class="day">Mon</div>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - 22.83°C</div>
-                <div class="temp">Day - 30.81°C</div>
+                <img src="https://openweathermap.org/img/wn//01d@4x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Thursday</div>
+                    <div class="temp">clear sky</div>
+                    <div class="temp">Night - 26.97°C</div>
+                    <div class="temp">Day - 34.68°C</div>
+                </div>
             </div>
-            
-            
+
             <div class="weather-forecast-item">
-                <div class="day">Tue</div>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - 22.28°C</div>
-                <div class="temp">Day - 30.98°C</div>
+                <img src="https://openweathermap.org/img/wn//04d@4x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Friday</div>
+                    <div class="temp">scattered clouds</div>
+                    <div class="temp">Night - 24.04°C</div>
+                    <div class="temp">Day - 34.46°C</div>
+                </div>
             </div>
-            
-            
+
             <div class="weather-forecast-item">
-                <div class="day">Wed</div>
-                <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - 22.15°C</div>
-                <div class="temp">Day - 33.95°C</div>
+                <img src="https://openweathermap.org/img/wn//01d@4x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Saturday</div>
+                    <div class="temp">clear sky</div>
+                    <div class="temp">Night - 24.07°C</div>
+                    <div class="temp">Day - 35.4°C</div>
+                </div>
             </div>
-            
-            
+
             <div class="weather-forecast-item">
-                <div class="day">Thu</div>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - 25.3°C</div>
-                <div class="temp">Day - 36.41°C</div>
+                <img src="https://openweathermap.org/img/wn//01d@4x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Sunday</div>
+                    <div class="temp">clear sky</div>
+                    <div class="temp">Night - 25.85°C</div>
+                    <div class="temp">Day - 36.83°C</div>
+                </div>
             </div>
-            
-            
+
             <div class="weather-forecast-item">
-                <div class="day">Fri</div>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - 26.18°C</div>
-                <div class="temp">Day - 35.9°C</div>
+                <img src="https://openweathermap.org/img/wn//01d@4x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Monday</div>
+                    <div class="temp">clear sky</div>
+                    <div class="temp">Night - 27.74°C</div>
+                    <div class="temp">Day - 37.73°C</div>
+                </div>
             </div>
-            
-            
+
             <div class="weather-forecast-item">
-                <div class="day">Sat</div>
-                <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - 26.14°C</div>
-                <div class="temp">Day - 35.68°C</div>
+                <img src="https://openweathermap.org/img/wn//01d@4x.png" alt="weather icon" class="w-icon">
+                <div class="other">
+                    <div class="day">Tuesday</div>
+                    <div class="temp">clear sky</div>
+                    <div class="temp">Night - 25.85°C</div>
+                    <div class="temp">Day - 36.83°C</div>
+                </div>
             </div>
+
             
-            
-            <div class="weather-forecast-item">
-                <div class="day">Sun</div>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - 27.99°C</div>
-                <div class="temp">Day - 38.86°C</div>
-            </div>            
 
         </div>
     </div>
 
+  <!--   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed in=true&libraries=places">
+</script> -->
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <script src="./weather.js"></script>
+    <script src="./weather.js" type="module"></script>
 </body>
 </html>
