@@ -228,7 +228,7 @@ function getData() {
 }
 
 function getvalues(){
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=22bfdce89a6b55d193e506d6827ae2c4`)
+  fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=22bfdce89a6b55d193e506d6827ae2c4`)
     .then(response => response.json()).then(data =>
    
    show_data(data)
