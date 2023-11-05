@@ -246,7 +246,7 @@ function getvalues(){
        fetch(`https://api.ambeedata.com/weather/latest/by-lat-lng?lat=${lt}&lng=${lg}`, {
 		"method": "GET",
 		"headers": {
-			"x-api-key": "920cf28f0ffbb612e59181982e935be552489a0df04190670cf3be9a7cac9336",
+			"x-api-key": "9b7a0e19ad3b7de46260b7d9571e332e75d9ecd70ebbbd74f7823af3432241a0",
 			"Content-type": "application/json"
 		}
     	})
@@ -258,7 +258,7 @@ function getvalues(){
         fetch(`https://api.ambeedata.com/soil/latest/by-lat-lng?lat=${lt}&lng=${lg}`, {
 	    	"method": "GET",
 	    	"headers": {
-	    		"x-api-key": "920cf28f0ffbb612e59181982e935be552489a0df04190670cf3be9a7cac9336",
+	    		"x-api-key": "9b7a0e19ad3b7de46260b7d9571e332e75d9ecd70ebbbd74f7823af3432241a0",
 	    		"Content-type": "application/json"
 	    	}
 	    })
